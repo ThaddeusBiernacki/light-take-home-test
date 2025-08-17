@@ -51,5 +51,7 @@ While designing and implementing the solution the candidate must consider the fo
 ### How to build & run
 ```sh
 ./gradlew clean build
-./gradlew run
+./gradlew run --console=plain
 ```
+### Db Design
+![db-design.png](db-design.png)

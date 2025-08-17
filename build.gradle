@@ -1,0 +1,16 @@
+plugins {
+    id 'base'
+}
+
+allprojects {
+    group = 'org.light'
+    version = '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+
+    tasks.withType(Test).configureEach {
+        useJUnitPlatform()
+    }
+}

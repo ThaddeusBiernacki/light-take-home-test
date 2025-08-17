@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+tasks.named('run', JavaExec) {
+    standardInput = System.in
+}
+
+application {
+    mainClass = 'org.light.challenge.app.App'
+}
+
+dependencies {
+    implementation project(':challenge-core')
+    implementation 'org.springframework:spring-context:6.1.11'
+    compileOnly "com.google.code.findbugs:jsr305:3.0.2"
+}
+
+test {
+    useJUnitPlatform()
+}
